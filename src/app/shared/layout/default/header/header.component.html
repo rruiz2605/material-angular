@@ -1,0 +1,29 @@
+<mat-toolbar class="flex bg-azure-primary-90">
+    <!--  -->
+    <button mat-icon-button (click)="openMenu.emit()" color="primary">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <button mat-button color="primary" class="ms-5" routerLink="home">
+        Angular Material
+    </button>
+
+    <mat-form-field appearance="outline" color="primary" class="mx-auto mt-4">
+        <input matInput placeholder="Buscar contenido">
+        <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+
+    <button mat-icon-button [matMenuTriggerFor]="dropdownProfile" color="primary">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #dropdownProfile>
+        <button mat-menu-item>
+            <mat-icon>manage_accounts</mat-icon>
+            Perfil
+        </button>
+        <button mat-menu-item>
+            <mat-icon>logout</mat-icon>
+            Cerrar Sesión
+        </button>
+    </mat-menu>
+</mat-toolbar>

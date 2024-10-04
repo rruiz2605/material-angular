@@ -1,0 +1,29 @@
+<mat-sidenav sidenav class="p-4">
+    <div class="flex w-full">
+        <button mat-icon-button class="ms-auto mb-2" (click)="sidenav().close()">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+    </div>
+    <mat-nav-list (click)="sidenav().close()">
+        <a mat-list-item routerLinkActive #rla1="routerLinkActive" [activated]="rla1.isActive" routerLink="home">
+            <mat-icon>home</mat-icon>
+            <span class="ms-2">Dashboard</span>
+        </a>
+        <a mat-list-item routerLinkActive #rla2="routerLinkActive" [activated]="rla2.isActive" routerLink="clientes">
+            <mat-icon>groups</mat-icon>
+            <span class="ms-2">Clientes</span>
+        </a>
+        <a mat-list-item routerLinkActive #rla3="routerLinkActive" [activated]="rla3.isActive" routerLink="productos">
+            <mat-icon>inventory</mat-icon>
+            <span class="ms-2">Productos y Servicios</span>
+        </a>
+        <a mat-list-item routerLinkActive #rla4="routerLinkActive" [activated]="rla4.isActive" routerLink="ventas">
+            <mat-icon>point_of_sale</mat-icon>
+            <span class="ms-2">Ventas</span>
+        </a>
+        <a mat-list-item routerLinkActive #rla5="routerLinkActive" [activated]="rla5.isActive" routerLink="reportes">
+            <mat-icon>analytics</mat-icon>
+            <span class="ms-2">Reportes</span>
+        </a>
+    </mat-nav-list>
+</mat-sidenav>
